@@ -15,6 +15,7 @@ namespace Mission3Assignment
             Console.WriteLine(board[3] + " | " + board[4] + " | " + board[5]);
             Console.WriteLine("---------");
             Console.WriteLine(board[6] + " | " + board[7] + " | " + board[8]);
+            Console.WriteLine("\n\n\n");
 
             return board;
         }
