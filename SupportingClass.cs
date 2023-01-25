@@ -69,7 +69,7 @@ namespace Mission3Assignment
             }
 
             // to check if X's win
-            if (board[0] == "X" && board[1] == "X" && board[2] == "X")
+            else if (board[0] == "X" && board[1] == "X" && board[2] == "X")
             {
                 Console.WriteLine("Player X wins!");
                 wins = true;
