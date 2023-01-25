@@ -14,11 +14,10 @@ namespace Mission3Assignment
 
             Console.WriteLine("Welcome to Tic-Tac-Toe!");
 
-            string[] gameBoard = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+            string[] gameBoard = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }; //initialize array
 
             sc.BoardDisplay(gameBoard);
 
-            //for (int i = 0; i < 5; i++)
             do
             {
                 bool isValid = false;
@@ -34,7 +33,7 @@ namespace Mission3Assignment
 
                     counter += 1;
 
-                    if (gameBoard[Convert.ToInt32(userIn) - 1] != "X" && gameBoard[Convert.ToInt32(userIn) - 1] != "O")
+                    if (gameBoard[Convert.ToInt32(userIn) - 1] != "X" && gameBoard[Convert.ToInt32(userIn) - 1] != "O") //check if game board spot has an x or an o
                     {
                         int numInArray = Convert.ToInt32(userIn) - 1;
                         gameBoard[numInArray] = "X";
@@ -43,15 +42,10 @@ namespace Mission3Assignment
                     }
                     else
                     {
-                        Console.WriteLine("Not a valid position, please try again");
+                        Console.WriteLine("Not a valid position, please try again"); // if there i an x or an o, make the player put in a new input
                         isValid = false;
                     }
                 }
-
-                //foreach (var item in gameBoard)
-                //{
-                //    Console.WriteLine(item.ToString());
-                //}
 
                 sc.BoardDisplay(gameBoard);
 
@@ -64,7 +58,7 @@ namespace Mission3Assignment
                 isValid = false;
 
 
-                while ((isValid == false) && (counter < 9))
+                while ((isValid == false) && (counter < 9)) // if counter reaches 9 and no one has won, end game
                 {
                     
 
@@ -87,24 +81,18 @@ namespace Mission3Assignment
                     }
                 }
 
-                //foreach (var item in gameBoard)
-                //{
-                //    Console.WriteLine(item.ToString());
-                //}
-
                 sc.BoardDisplay(gameBoard);
 
                 Console.WriteLine(counter);
 
-                //sc.GameWinner(gameBoard);
-                
+
 
                 if (counter == 9)
                 {
                     Console.WriteLine("There is no winner. Try again");
                 }
 
-            } while ((sc.GameWinner(gameBoard) == false) && (counter != 9));
+            } while ((sc.GameWinner(gameBoard) == false) && (counter != 9)); // determine winner
 
 
 
