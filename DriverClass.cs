@@ -15,7 +15,7 @@ namespace Mission3Assignment
 
             string[] gameBoard = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
-            sc.boardDisplay(gameBoard);
+            sc.BoardDisplay(gameBoard);
 
             for (int i = 0; i < 5; i++)
             {
@@ -48,7 +48,7 @@ namespace Mission3Assignment
                 //    Console.WriteLine(item.ToString());
                 //}
 
-                sc.boardDisplay(gameBoard);
+                sc.BoardDisplay(gameBoard);
 
 
                 isValid = false;
@@ -78,10 +78,10 @@ namespace Mission3Assignment
                 //    Console.WriteLine(item.ToString());
                 //}
 
-                sc.boardDisplay(gameBoard);
+                sc.BoardDisplay(gameBoard);
 
 
-                sc.GameWinner();
+                sc.GameWinner(gameBoard);
 
 
 
