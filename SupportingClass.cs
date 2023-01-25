@@ -112,7 +112,6 @@ namespace Mission3Assignment
             }
             else
             {
-                Console.WriteLine("No one has won, keep playing");
                 wins = false;            
             }
             return (wins);
