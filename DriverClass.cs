@@ -17,10 +17,11 @@ namespace Mission3Assignment
 
             sc.BoardDisplay(gameBoard);
 
-            for (int i = 0; i < 5; i++)
+            //for (int i = 0; i < 5; i++)
+            do
             {
                 bool isValid = false;
-                
+
 
                 while (isValid == false)
                 {
@@ -50,9 +51,10 @@ namespace Mission3Assignment
 
                 sc.BoardDisplay(gameBoard);
 
+                sc.GameWinner(gameBoard);
 
                 isValid = false;
-                
+
 
                 while (isValid == false)
                 {
@@ -85,7 +87,7 @@ namespace Mission3Assignment
 
 
 
-            }
+            } while (sc.GameWinner(gameBoard) == false);
 
 
 
