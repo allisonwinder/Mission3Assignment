@@ -10,6 +10,7 @@ namespace Mission3Assignment
 
             string userIn = "";
             string userIn2 = "";
+            int counter = 0;
 
             Console.WriteLine("Welcome to Tic-Tac-Toe!");
 
@@ -25,10 +26,13 @@ namespace Mission3Assignment
 
                 while (isValid == false)
                 {
+                    
 
-                    Console.WriteLine("Player 1's turn! Choose a number on the board to place an X");
+                    Console.WriteLine("Player X's turn! Choose a number on the board to place an X");
 
                     userIn = Console.ReadLine();
+
+                    counter += 1;
 
                     if (gameBoard[Convert.ToInt32(userIn) - 1] != "X" && gameBoard[Convert.ToInt32(userIn) - 1] != "O")
                     {
@@ -51,7 +55,7 @@ namespace Mission3Assignment
 
                 sc.BoardDisplay(gameBoard);
 
-                sc.GameWinner(gameBoard);
+                
                 if (sc.GameWinner(gameBoard) == true)
                 {
                     break;
@@ -60,10 +64,14 @@ namespace Mission3Assignment
                 isValid = false;
 
 
-                while (isValid == false)
+                while ((isValid == false) && (counter < 9))
                 {
-                    Console.WriteLine("Player 2's turn! Choose a number on the board to place an O");
+                    
+
+                    Console.WriteLine("Player O's turn! Choose a number on the board to place an O");
+                    
                     userIn2 = Console.ReadLine();
+                    counter += 1;
 
                     if (gameBoard[Convert.ToInt32(userIn2) - 1] != "X" && gameBoard[Convert.ToInt32(userIn2) - 1] != "O")
                     {
@@ -86,12 +94,17 @@ namespace Mission3Assignment
 
                 sc.BoardDisplay(gameBoard);
 
+                Console.WriteLine(counter);
 
-                sc.GameWinner(gameBoard);
+                //sc.GameWinner(gameBoard);
+                
 
+                if (counter == 9)
+                {
+                    Console.WriteLine("There is no winner. Try again");
+                }
 
-
-            } while (sc.GameWinner(gameBoard) == false);
+            } while ((sc.GameWinner(gameBoard) == false) && (counter != 9));
 
 
 
