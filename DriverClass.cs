@@ -50,6 +50,7 @@ namespace Mission3Assignment
 
                 sc.BoardDisplay(gameBoard);
 
+                sc.GameWinner(gameBoard);
 
                 isValid = false;
                 
